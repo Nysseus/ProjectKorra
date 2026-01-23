@@ -250,6 +250,9 @@ public class AirBlast extends AirAbility {
 			if (Commands.invincible.contains(((Player) entity).getName())) {
 				return;
 			}
+			if (entity == player && getPushFactor() == 0) {
+				return;
+			}
 		}
 			
 		final boolean isUser = entity.getUniqueId() == this.player.getUniqueId();
